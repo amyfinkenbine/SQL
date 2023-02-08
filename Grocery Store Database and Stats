@@ -1,0 +1,16 @@
+--created a store data base and it's inventory
+CREATE TABLE dog_store (id INTEGER PRIMARY KEY, item TEXT, quantity INTEGER, price NUMERIC, vendor TEXT);
+
+INSERT INTO dog_store VALUES
+(1, "Leash", 4, 2.50, "bow wow"),
+(2, "Dog Food", 10, 10.00, "Lucky's"),
+(3, "Collar", 45, 5.00, "paws"),
+(4, "treat", 32, 1.00, "barky"),
+(5, "stuffedtoy", 22,2.50, "barky"),
+(6, "bone", 14, 9.99, "lucky's");
+
+--I ordered the inventory by price
+SELECT * from dog_store ORDER BY price ASC ;
+
+--and displayed our average store prices
+SELECT AVG(price) FROM dog_store;
